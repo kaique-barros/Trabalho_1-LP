@@ -35,7 +35,7 @@ public class Vendedor extends Funcionario{
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost/TrabalhoLP", "sys_seller", "123456");
             Statement stmt = con.createStatement();
-            stmt.executeUpdate("INSERT INTO product_stock VALUES ('"+ nome +"', '"+ description +"', '"+ img_path +"', '"+ estoque +"', '"+  preco +"', NULL)");
+            stmt.executeUpdate("INSERT INTO product_stock VALUES ('"+nome+"', '"+description+"', "+preco+", "+estoque+", '"+img_path+"', 1, NULL)");
 
             con.close();
             return "Produto Adicionado";

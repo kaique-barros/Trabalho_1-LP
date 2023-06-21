@@ -31,7 +31,7 @@ public class Email {
             massage.setFrom(new InternetAddress(remetente));
             massage.addRecipient(Message.RecipientType.TO, new InternetAddress(destinatario));
             massage.setSubject(assunto);
-            massage.setContent("<h1>TITULO MT FODA</h1>", "text/html");
+            massage.setContent("<h1>Confirmação de compra</h1>" + mensagem, "text/html");
             Transport.send(massage);
             return "Email enviado com sucesso";
         } catch (AddressException e) {
