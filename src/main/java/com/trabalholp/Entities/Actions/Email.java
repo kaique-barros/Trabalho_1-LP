@@ -1,5 +1,11 @@
 package com.trabalholp.Entities.Actions;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 import java.util.Properties;
 
 import javax.mail.Message;
@@ -11,8 +17,10 @@ import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+import com.trabalholp.Exceptions.TipoInvalido;
+
 public class Email {
-    public String sendMail(String destinatario, String assunto, String mensagem){
+    public String sendMail(String destinatario, String assunto, String tipo){
         String remetente = "jurandircasaconforto@gmail.com";
         
         Properties prop = new Properties();
@@ -28,18 +36,57 @@ public class Email {
         });
         try {
             MimeMessage massage = new MimeMessage(ses);
+            String modelDir = "C:/Users/kaiqb/OneDrive/Documents/Cefet/LP/TrabalhoLP/"+ emailType(tipo) +"_mailModel.html";
             massage.setFrom(new InternetAddress(remetente));
             massage.addRecipient(Message.RecipientType.TO, new InternetAddress(destinatario));
             massage.setSubject(assunto);
-            massage.setContent("<h1>Confirmação de compra</h1>" + mensagem, "text/html");
+            massage.setContent(lerModelo(modelDir), "text/html");
             Transport.send(massage);
             return "Email enviado com sucesso";
         } catch (AddressException e) {
             return e.getMessage();
         } catch (MessagingException e) {
             return e.getMessage();
+        } catch (TipoInvalido e){
+            return "erro";
         }
     }
 
+    private String lerModelo(String modelDir){
+        try {
+            FileInputStream arquivo = new FileInputStream(modelDir);
+            InputStreamReader isr = new InputStreamReader(arquivo);
+            BufferedReader buffRead = new BufferedReader(isr);
+
+            String lin = buffRead.readLine();
+            String modelo = lin;
+            
+            while (lin != null) {
+                lin = buffRead.readLine();
+                modelo += lin;
+            }
+            
+            buffRead.close();
+            isr.close();
+            arquivo.close();
+
+            return modelo;
+        } catch (FileNotFoundException e) {
+            return e.getMessage();
+        } catch (IOException e){
+            return e.getMessage();
+        }
+    }
+
+    private String emailType(String tipo) throws TipoInvalido{
+        switch (tipo) {
+            case "compra":
+                return "purchase";
+            case "repor estoque":
+                return "replanish";
+            default:
+                throw new TipoInvalido();
+        }
+    }
 
 }

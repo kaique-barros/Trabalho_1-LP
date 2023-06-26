@@ -9,7 +9,7 @@ Cliente:
     -Retornar nome, email e telefone
     -Retornar cpf, rg e formas de pagamento apenas com senha
     -Adicionar/remover formas de pagamento ✅
-    -Adicionar/remover endereço 
+    -Adicionar/remover endereço ✅
 
 Compra: 
     -Validar as info do cliente, do cartão e do produto
