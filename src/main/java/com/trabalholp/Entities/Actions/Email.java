@@ -36,7 +36,7 @@ public class Email {
         });
         try {
             MimeMessage massage = new MimeMessage(ses);
-            String modelDir = "C:/Users/kaiqb/OneDrive/Documents/Cefet/LP/TrabalhoLP/"+ emailType(tipo) +"_mailModel.html";
+            String modelDir = "./src/HTML_Models/"+ emailType(tipo) +"_mailModel.html";
             massage.setFrom(new InternetAddress(remetente));
             massage.addRecipient(Message.RecipientType.TO, new InternetAddress(destinatario));
             massage.setSubject(assunto);

@@ -15,6 +15,14 @@ import com.trabalholp.Exceptions.UsuarioInexistente;
 public class Cliente {
     String nome, cpf, rg, email, telefone;
 
+    public Cliente(String cpf, String senha){
+        try {
+            logar(cpf, senha);
+        } catch (UsuarioInexistente | SenhaErrada e) {
+            e.printStackTrace();
+        }
+    }
+
     public String logar(String cpf, String senha) throws UsuarioInexistente, SenhaErrada{
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -34,9 +42,7 @@ public class Cliente {
             } else throw new UsuarioInexistente();
 
             return "Logado com sucesso";
-        } catch (ClassNotFoundException e) {
-            return e.getMessage();
-        } catch (SQLException e){
+        } catch (ClassNotFoundException |SQLException e){
             return e.getMessage();
         }
     }
@@ -49,9 +55,7 @@ public class Cliente {
             stmt.executeUpdate("INSERT INTO user_credit_card VALUES ('"+ numero +"', '"+ cvv +"', '"+ validade +"', '"+ cpf +"')");
 
             con.close();
-        } catch (ClassNotFoundException e) {
-            System.out.println(e.getMessage());
-        } catch (SQLException e){
+        } catch (ClassNotFoundException |SQLException e){
             System.out.println(e.getMessage());
         }
 
@@ -66,9 +70,7 @@ public class Cliente {
             stmt.executeUpdate("INSERT INTO client_adress VALUES ('"+ rua +"', '"+ bairro +"', '"+ numero +"', '"+ cep +"', '"+ referencia +"', '"+ cpf +"', NULL)");
 
             con.close();
-        } catch (ClassNotFoundException e) {
-            System.out.println(e.getMessage());
-        } catch (SQLException e){
+        } catch (ClassNotFoundException | SQLException e){
             System.out.println(e.getMessage());
         }
 
