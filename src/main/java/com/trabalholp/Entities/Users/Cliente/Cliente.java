@@ -78,7 +78,7 @@ public class Cliente {
 
     public void removeCartao(){
         try {
-            ArrayList<String> numeros = new ArrayList<>();
+            ArrayList<String> numeros = new ArrayList<String>();
             Scanner sc = new Scanner(System.in);
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost/trabalholp", "sys_client", "123456");
@@ -91,9 +91,7 @@ public class Cliente {
             rsClient.close();
 
             System.out.println("Qual desses cartões você deseja excluir? :");
-            for(String numero : numeros){
-                System.out.println((numeros.indexOf(numero) + 1) + " - " + numero);
-            }
+            numeros.forEach(numero -> System.out.println((numeros.indexOf(numero) + 1) + " " + listarCartao(numero)));
             int i = sc.nextInt() - 1;
             
             con.createStatement()
@@ -148,6 +146,11 @@ public class Cliente {
         } catch (SQLException e){
             System.out.println(e.getMessage());
         }
+    }
+
+    public String listarCartao(String numero){
+        CartaoDeCredito cc = new CartaoDeCredito(numero);
+        return cc.getNumero();
     }
 
 }
