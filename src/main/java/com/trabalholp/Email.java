@@ -1,4 +1,4 @@
-package com.trabalholp.Entities.Actions;
+package com.trabalholp;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -17,7 +17,6 @@ import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-import com.trabalholp.Exceptions.TipoInvalido;
 
 public class Email {
     public String sendMail(String destinatario, String assunto, String tipo){
@@ -47,8 +46,6 @@ public class Email {
             return e.getMessage();
         } catch (MessagingException e) {
             return e.getMessage();
-        } catch (TipoInvalido e){
-            return "erro";
         }
     }
 
@@ -78,14 +75,14 @@ public class Email {
         }
     }
 
-    private String emailType(String tipo) throws TipoInvalido{
+    private String emailType(String tipo){
         switch (tipo) {
             case "compra":
                 return "purchase";
             case "repor estoque":
                 return "replanish";
             default:
-                throw new TipoInvalido();
+                return null;
         }
     }
 
