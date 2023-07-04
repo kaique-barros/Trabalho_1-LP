@@ -1,4 +1,4 @@
-package com.trabalholp;
+package com.trabalholp.External_connections;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;

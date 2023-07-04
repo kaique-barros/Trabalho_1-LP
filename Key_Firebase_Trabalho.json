@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "juradir-casa-conforto",
+  "private_key_id": "b7697f865befb11f89e6decabdb55b52fe062c42",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC4vo8Xa0r4GYJ4\nNp/t2YkY0skkIofFb9GkjI8kDhVUVs0T4gK/58hiwk3DIO8HapVOQrv9aOMVvmDm\n5XQtXc2Ng39Ghh/NO7815MWUuvbJSocCzETQZR9CjjNdHBOnYAYeFATG4KDP6a/9\nAD7bLXd6AmErFjinoQOP2PwiFaIiFWfRvU8ipe3FRziKmk54xjWgEKbwnjy4uxdx\nmDitYe98iKbZrDinJEqL4l1fGqrZt6Ue/zSm/K+CTBcql5Si7gIiauuAXo/+O9Pi\nfU/nBzdx6W03UMfT6v1qmukWfls3sP8JHhcoms82Hg4nU4+bPwXRgqOiX+U4neSp\nNrmo+E/5AgMBAAECggEAIZECB7PHYc+kvHnUUg9x0PBPeoDJoW5hLWAai+cBKhtB\nVKj+bebLqmH6ZgdAVt0fNqJ6bJ8Xj3ZRPfKXyrxd4iXvxJ0O/yepZL3lxlG4EDe5\n0yDRKfoNlXanz3WP/pu8UM+7VHUw0sX3Y2Udho46xJDVHdKCRbbEImk+2mSK2l0w\n3jKPwHHAgHgzDEIYNmhIq7K14KLlRRWUyw6gU/1urqYfObr9Uw9XJT4JEmFC25sU\n4YkR7ictQlQLDYumk0PjVmcDtna1oBBrvn5kjxkXszt2frEC+jt3tP8S7zgNqZLD\nW6+LBA1UCpPcp0FNibCiCFg3DKLsA+t4yT/aULgJeQKBgQDwOB7cRQnKNuUD9WHX\nTzzUI/cSftevCmB2+OZ5CbUYufzRR/4rA/QsMiuxQ4CddeXdqoKpaXBMxxj/GaZu\nlJgSS72SNsZvZU/Q704X6W6ssCJlhhgruUFF3/iqANV4OjEZjpkj3gHgdjjNKvsv\n2jt6OuJgq8Yx21XSXXHRUmuB5QKBgQDE4X3mdIiAK1rJsMS/WGTXaxCBcUv3xMJc\nx1mw4LSTKkiLf0soDEhVNBjaCtjKzKkwbrGM8d6RVJE9rUdbdiJIfpPDLnmQg/sY\n5D1aa+o+JhlrmFX5Tt0k3XEtIylQV6sRZvqT/qqET06a4apzfYDOApxGmY2X6dp3\nAOgOoFlEhQKBgQC70ZVHce9CnQMYwj36o2iTEX+3hVdL89gSjW9eCZn/uEOUui5f\nIZtDBwMkePvRoYHVe+DnZpo4XZ8Mrdh0M1hnTbLt5EfohxUN7l1n0ssG2Dw8lsjF\nPvZrFMAO49IES7NiIR1ZbtaW0rh8qfN1qbLBUdL39LZk+vIyJX+9QyzthQKBgC46\nM/GUkyhlBaAt3USAYM0j2nBKRegbTvex5yFc4YlceEQo02DH4YQAA4XO3jBf9anl\nk9LgR74f+SpeMU8MYehbsB44H1sLYj3p+W3twMZu87ELx8QN/GbXh+dtRhoTO5uO\nbm+pcCg45t/+9KLBaSj1+/OnwlNVGXKvx80HYW5xAoGBANrZyicsQkg4/L2qHOfB\nAeR3AGDPL5hCTLb2ObRuLSwCdpyb1XbjZJlc2O8D+6O8BAq/Bkr3HSrgHhqC8NCc\nPlha0RHTu3U8oXovWBmMHk7bjmkrVCd+M9TX4W+mLRw7/pPRZLTETnrhGd6wqhnZ\ndByy0v3FfZU9u01zwuod2WGn\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-tdm8g@juradir-casa-conforto.iam.gserviceaccount.com",
+  "client_id": "103252127814351972200",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-tdm8g%40juradir-casa-conforto.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -1,0 +1,29 @@
+public static boolean verify(boolean high, String info){
+        if(high){
+            Argon2 argon2 = Argon2Factory.create();
+            String argon2Hash = argon2.hash(10, 65052, 1, info.toCharArray());
+            
+            try {
+                MessageDigest md5 = MessageDigest.getInstance("MD5");
+                byte[] argon2bytes = argon2Hash.getBytes();
+
+                return ;
+            } catch (NoSuchAlgorithmException e) {
+                e.printStackTrace();
+                return false;
+            }
+        }
+        else{
+            try {
+                MessageDigest md5 = MessageDigest.getInstance("MD5");                
+                byte[] infoBytes = info.getBytes();
+
+                return ;
+            } catch (NoSuchAlgorithmException e) {
+                e.printStackTrace();
+                return false;
+            }
+        }
+    }
+
+    Cliente.vefica("nome", criptografia.encritp(true,"123.123.123-12"));
